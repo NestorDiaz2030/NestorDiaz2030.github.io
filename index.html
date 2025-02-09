@@ -4,9 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Página con GitHub Pages</title>
+    <style>
+        :root {
+            --bg-color: #f5f5f5;
+            --text-color: #333;
+            --btn-bg: #007bff;
+            --btn-text: #fff;
+        }
+
+        body.dark-mode {
+            --bg-color: #222;
+            --text-color: #f5f5f5;
+            --btn-bg: #ff9800;
+            --btn-text: #000;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        header {
+            background: var(--btn-bg);
+            color: var(--btn-text);
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .button {
+            background: var(--btn-bg);
+            color: var(--btn-text);
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: var(--btn-bg);
+            color: var(--btn-text);
+        }
+
+        a {
+            color: var(--btn-text);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hola, mundo!</h1>
-    <p>Esta es mi primera página con GitHub Pages.</p>
+    <header>
+        Mi Página con GitHub Pages
+    </header>
+
+    <div class="container">
+        <h1>¡Bienvenido!</h1>
+        <p>Esta es una página creada con GitHub Pages. Puedes personalizarla como desees.</p>
+        <button class="button" onclick="toggleDarkMode()">Cambiar Modo</button>
+    </div>
+
+    <footer>
+        <p>Creado con 💙 por <a href="https://github.com/TU-USUARIO" target="_blank">Mi GitHub</a></p>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 </body>
 </html>
